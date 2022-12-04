@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Dec 06, 2022',
+  birthdate: 'Dec 05, 2022',
   name: 'Ciaa'
 };
 
@@ -24,9 +24,9 @@ confetti.render();
 const second = 1000,
   minute = second * 60,
   hour = minute * 60,
-  day = hour * 1;
+  day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
+let countDown = new Date(new Date().getTime() + 10 * minute).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
